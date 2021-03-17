@@ -14,30 +14,26 @@
 
 echo Backing up your files....
 
-sleep 2
-
 mount /dev/edit-me
 
 mkdir /media/$USER/edit-me/All-your-backup
 
-rsync -r /home/$USER/Documents /media/$USER/edit-me/All-your-backup && echo Documents folder has been backed up.
+rsync -r ~/Documents /media/$USER/edit-me/All-your-backup && echo Documents folder has been backed up.
 
-rsync -r /home/$USER/Downloads /media/$USER/edit-me/All-your-backup && echo Downloads folder has been backed up.
+rsync -r ~/Downloads /media/$USER/edit-me/All-your-backup && echo Downloads folder has been backed up.
 
-rsync -r /home/$USER/Music/ /media/$USER/edit-me/All-your-backup && echo Music folder has been backed up.
+rsync -r ~/Music/ /media/$USER/edit-me/All-your-backup && echo Music folder has been backed up.
 
-rsync -r /home/$USER/Pictures /media/$USER/edit-me/All-your-backup && echo Pictures folder has been backed up.
+rsync -r ~/Pictures /media/$USER/edit-me/All-your-backup && echo Pictures folder has been backed up.
 
-rsync -r /home/$USER/Public /media/$USER/edit-me/All-your-backup && echo Public folder has been backed up.
+rsync -r ~/Public /media/$USER/edit-me/All-your-backup && echo Public folder has been backed up.
 
-rsync -r /home/$USER/Templates /media/$USER/edit-me/All-your-backup && echo Templates folder has been backed up.
+rsync -r ~/Templates /media/$USER/edit-me/All-your-backup && echo Templates folder has been backed up.
 
-rsync -r /home/$USER/Videos /media/$USER/edit-me/All-your-backup && echo Videos folder has been backed up.
+rsync -r ~/Videos /media/$USER/edit-me/All-your-backup && echo Videos folder has been backed up.
 
-rsync -r /home/$USER/Desktop /media/$USER/edit-me/All-your-backup && echo Desktop has been backed up.
+rsync -r ~/Desktop /media/$USER/edit-me/All-your-backup && echo Desktop has been backed up.
 
-sleep 1
+rsync -r ~/.config /media/$USER/edit-me/All-your-backup && echo .config has been backed up.
 
 echo Backup Done.
-
-sleep 2
